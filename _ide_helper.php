@@ -5125,7 +5125,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the underlying database connection.
          *
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function getConnection()
@@ -6646,7 +6646,7 @@ namespace Illuminate\Support\Facades {
          * Build a database connection instance from the given configuration.
          *
          * @param array $config
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function build($config)
@@ -6673,7 +6673,7 @@ namespace Illuminate\Support\Facades {
          * @param string $name
          * @param array $config
          * @param bool $force
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function connectUsing($name, $config, $force = false)
@@ -6923,7 +6923,8 @@ namespace Illuminate\Support\Facades {
          */
         public static function getDriverTitle()
         {
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            //Method inherited from \Illuminate\Database\SQLiteConnection 
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getDriverTitle();
         }
 
@@ -6935,7 +6936,8 @@ namespace Illuminate\Support\Facades {
          */
         public static function getSchemaBuilder()
         {
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            //Method inherited from \Illuminate\Database\SQLiteConnection 
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getSchemaBuilder();
         }
 
@@ -6949,7 +6951,8 @@ namespace Illuminate\Support\Facades {
          */
         public static function getSchemaState($files = null, $processFactory = null)
         {
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            //Method inherited from \Illuminate\Database\SQLiteConnection 
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getSchemaState($files, $processFactory);
         }
 
@@ -6962,7 +6965,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->useDefaultQueryGrammar();
         }
 
@@ -6975,7 +6978,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->useDefaultSchemaGrammar();
         }
 
@@ -6988,7 +6991,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->useDefaultPostProcessor();
         }
 
@@ -7003,7 +7006,7 @@ namespace Illuminate\Support\Facades {
         public static function table($table, $as = null)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->table($table, $as);
         }
 
@@ -7016,7 +7019,7 @@ namespace Illuminate\Support\Facades {
         public static function query()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->query();
         }
 
@@ -7032,7 +7035,7 @@ namespace Illuminate\Support\Facades {
         public static function selectOne($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->selectOne($query, $bindings, $useReadPdo);
         }
 
@@ -7049,7 +7052,7 @@ namespace Illuminate\Support\Facades {
         public static function scalar($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->scalar($query, $bindings, $useReadPdo);
         }
 
@@ -7064,7 +7067,7 @@ namespace Illuminate\Support\Facades {
         public static function selectFromWriteConnection($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->selectFromWriteConnection($query, $bindings);
         }
 
@@ -7080,7 +7083,7 @@ namespace Illuminate\Support\Facades {
         public static function select($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->select($query, $bindings, $useReadPdo);
         }
 
@@ -7096,7 +7099,7 @@ namespace Illuminate\Support\Facades {
         public static function selectResultSets($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->selectResultSets($query, $bindings, $useReadPdo);
         }
 
@@ -7112,7 +7115,7 @@ namespace Illuminate\Support\Facades {
         public static function cursor($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->cursor($query, $bindings, $useReadPdo);
         }
 
@@ -7127,7 +7130,7 @@ namespace Illuminate\Support\Facades {
         public static function insert($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->insert($query, $bindings);
         }
 
@@ -7142,7 +7145,7 @@ namespace Illuminate\Support\Facades {
         public static function update($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->update($query, $bindings);
         }
 
@@ -7157,7 +7160,7 @@ namespace Illuminate\Support\Facades {
         public static function delete($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->delete($query, $bindings);
         }
 
@@ -7172,7 +7175,7 @@ namespace Illuminate\Support\Facades {
         public static function statement($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->statement($query, $bindings);
         }
 
@@ -7187,7 +7190,7 @@ namespace Illuminate\Support\Facades {
         public static function affectingStatement($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->affectingStatement($query, $bindings);
         }
 
@@ -7201,7 +7204,7 @@ namespace Illuminate\Support\Facades {
         public static function unprepared($query)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->unprepared($query);
         }
 
@@ -7214,7 +7217,7 @@ namespace Illuminate\Support\Facades {
         public static function threadCount()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->threadCount();
         }
 
@@ -7228,7 +7231,7 @@ namespace Illuminate\Support\Facades {
         public static function pretend($callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->pretend($callback);
         }
 
@@ -7242,7 +7245,7 @@ namespace Illuminate\Support\Facades {
         public static function withoutPretending($callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->withoutPretending($callback);
         }
 
@@ -7257,7 +7260,7 @@ namespace Illuminate\Support\Facades {
         public static function bindValues($statement, $bindings)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->bindValues($statement, $bindings);
         }
 
@@ -7271,7 +7274,7 @@ namespace Illuminate\Support\Facades {
         public static function prepareBindings($bindings)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->prepareBindings($bindings);
         }
 
@@ -7287,7 +7290,7 @@ namespace Illuminate\Support\Facades {
         public static function logQuery($query, $bindings, $time = null)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->logQuery($query, $bindings, $time);
         }
 
@@ -7302,7 +7305,7 @@ namespace Illuminate\Support\Facades {
         public static function whenQueryingForLongerThan($threshold, $handler)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->whenQueryingForLongerThan($threshold, $handler);
         }
 
@@ -7315,7 +7318,7 @@ namespace Illuminate\Support\Facades {
         public static function allowQueryDurationHandlersToRunAgain()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->allowQueryDurationHandlersToRunAgain();
         }
 
@@ -7328,7 +7331,7 @@ namespace Illuminate\Support\Facades {
         public static function totalQueryDuration()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->totalQueryDuration();
         }
 
@@ -7341,7 +7344,7 @@ namespace Illuminate\Support\Facades {
         public static function resetTotalQueryDuration()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->resetTotalQueryDuration();
         }
 
@@ -7354,7 +7357,7 @@ namespace Illuminate\Support\Facades {
         public static function reconnectIfMissingConnection()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->reconnectIfMissingConnection();
         }
 
@@ -7362,13 +7365,13 @@ namespace Illuminate\Support\Facades {
          * Register a hook to be run just before a database transaction is started.
          *
          * @param \Closure $callback
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function beforeStartingTransaction($callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->beforeStartingTransaction($callback);
         }
 
@@ -7376,13 +7379,13 @@ namespace Illuminate\Support\Facades {
          * Register a hook to be run just before a database query is executed.
          *
          * @param \Closure $callback
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function beforeExecuting($callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->beforeExecuting($callback);
         }
 
@@ -7396,7 +7399,7 @@ namespace Illuminate\Support\Facades {
         public static function listen($callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->listen($callback);
         }
 
@@ -7410,7 +7413,7 @@ namespace Illuminate\Support\Facades {
         public static function raw($value)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->raw($value);
         }
 
@@ -7425,7 +7428,7 @@ namespace Illuminate\Support\Facades {
         public static function escape($value, $binary = false)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->escape($value, $binary);
         }
 
@@ -7438,7 +7441,7 @@ namespace Illuminate\Support\Facades {
         public static function hasModifiedRecords()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->hasModifiedRecords();
         }
 
@@ -7452,7 +7455,7 @@ namespace Illuminate\Support\Facades {
         public static function recordsHaveBeenModified($value = true)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->recordsHaveBeenModified($value);
         }
 
@@ -7460,13 +7463,13 @@ namespace Illuminate\Support\Facades {
          * Set the record modification state.
          *
          * @param bool $value
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setRecordModificationState($value)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setRecordModificationState($value);
         }
 
@@ -7479,7 +7482,7 @@ namespace Illuminate\Support\Facades {
         public static function forgetRecordModificationState()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->forgetRecordModificationState();
         }
 
@@ -7487,13 +7490,13 @@ namespace Illuminate\Support\Facades {
          * Indicate that the connection should use the write PDO connection for reads.
          *
          * @param bool $value
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function useWriteConnectionWhenReading($value = true)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->useWriteConnectionWhenReading($value);
         }
 
@@ -7506,7 +7509,7 @@ namespace Illuminate\Support\Facades {
         public static function getPdo()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getPdo();
         }
 
@@ -7519,7 +7522,7 @@ namespace Illuminate\Support\Facades {
         public static function getRawPdo()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getRawPdo();
         }
 
@@ -7532,7 +7535,7 @@ namespace Illuminate\Support\Facades {
         public static function getReadPdo()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getReadPdo();
         }
 
@@ -7545,7 +7548,7 @@ namespace Illuminate\Support\Facades {
         public static function getRawReadPdo()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getRawReadPdo();
         }
 
@@ -7553,13 +7556,13 @@ namespace Illuminate\Support\Facades {
          * Set the PDO connection.
          *
          * @param \PDO|\Closure|null $pdo
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setPdo($pdo);
         }
 
@@ -7567,13 +7570,13 @@ namespace Illuminate\Support\Facades {
          * Set the PDO connection used for reading.
          *
          * @param \PDO|\Closure|null $pdo
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setReadPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setReadPdo($pdo);
         }
 
@@ -7586,7 +7589,7 @@ namespace Illuminate\Support\Facades {
         public static function getName()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getName();
         }
 
@@ -7599,7 +7602,7 @@ namespace Illuminate\Support\Facades {
         public static function getNameWithReadWriteType()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getNameWithReadWriteType();
         }
 
@@ -7613,7 +7616,7 @@ namespace Illuminate\Support\Facades {
         public static function getConfig($option = null)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getConfig($option);
         }
 
@@ -7626,7 +7629,7 @@ namespace Illuminate\Support\Facades {
         public static function getDriverName()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getDriverName();
         }
 
@@ -7639,7 +7642,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getQueryGrammar();
         }
 
@@ -7647,13 +7650,13 @@ namespace Illuminate\Support\Facades {
          * Set the query grammar used by the connection.
          *
          * @param \Illuminate\Database\Query\Grammars\Grammar $grammar
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setQueryGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setQueryGrammar($grammar);
         }
 
@@ -7666,7 +7669,7 @@ namespace Illuminate\Support\Facades {
         public static function getSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getSchemaGrammar();
         }
 
@@ -7674,13 +7677,13 @@ namespace Illuminate\Support\Facades {
          * Set the schema grammar used by the connection.
          *
          * @param \Illuminate\Database\Schema\Grammars\Grammar $grammar
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setSchemaGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setSchemaGrammar($grammar);
         }
 
@@ -7693,7 +7696,7 @@ namespace Illuminate\Support\Facades {
         public static function getPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getPostProcessor();
         }
 
@@ -7701,13 +7704,13 @@ namespace Illuminate\Support\Facades {
          * Set the query post processor used by the connection.
          *
          * @param \Illuminate\Database\Query\Processors\Processor $processor
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setPostProcessor($processor)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setPostProcessor($processor);
         }
 
@@ -7720,7 +7723,7 @@ namespace Illuminate\Support\Facades {
         public static function getEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getEventDispatcher();
         }
 
@@ -7728,13 +7731,13 @@ namespace Illuminate\Support\Facades {
          * Set the event dispatcher instance on the connection.
          *
          * @param \Illuminate\Contracts\Events\Dispatcher $events
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setEventDispatcher($events)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setEventDispatcher($events);
         }
 
@@ -7747,7 +7750,7 @@ namespace Illuminate\Support\Facades {
         public static function unsetEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->unsetEventDispatcher();
         }
 
@@ -7755,13 +7758,13 @@ namespace Illuminate\Support\Facades {
          * Set the transaction manager instance on the connection.
          *
          * @param \Illuminate\Database\DatabaseTransactionsManager $manager
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setTransactionManager($manager)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setTransactionManager($manager);
         }
 
@@ -7774,7 +7777,7 @@ namespace Illuminate\Support\Facades {
         public static function unsetTransactionManager()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->unsetTransactionManager();
         }
 
@@ -7787,7 +7790,7 @@ namespace Illuminate\Support\Facades {
         public static function pretending()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->pretending();
         }
 
@@ -7800,7 +7803,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getQueryLog();
         }
 
@@ -7813,7 +7816,7 @@ namespace Illuminate\Support\Facades {
         public static function getRawQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getRawQueryLog();
         }
 
@@ -7826,7 +7829,7 @@ namespace Illuminate\Support\Facades {
         public static function flushQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->flushQueryLog();
         }
 
@@ -7839,7 +7842,7 @@ namespace Illuminate\Support\Facades {
         public static function enableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->enableQueryLog();
         }
 
@@ -7852,7 +7855,7 @@ namespace Illuminate\Support\Facades {
         public static function disableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->disableQueryLog();
         }
 
@@ -7865,7 +7868,7 @@ namespace Illuminate\Support\Facades {
         public static function logging()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->logging();
         }
 
@@ -7878,7 +7881,7 @@ namespace Illuminate\Support\Facades {
         public static function getDatabaseName()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getDatabaseName();
         }
 
@@ -7886,13 +7889,13 @@ namespace Illuminate\Support\Facades {
          * Set the name of the connected database.
          *
          * @param string $database
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setDatabaseName($database)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setDatabaseName($database);
         }
 
@@ -7900,13 +7903,13 @@ namespace Illuminate\Support\Facades {
          * Set the read / write type of the connection.
          *
          * @param string|null $readWriteType
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setReadWriteType($readWriteType)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setReadWriteType($readWriteType);
         }
 
@@ -7919,7 +7922,7 @@ namespace Illuminate\Support\Facades {
         public static function getTablePrefix()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getTablePrefix();
         }
 
@@ -7927,13 +7930,13 @@ namespace Illuminate\Support\Facades {
          * Set the table prefix in use by the connection.
          *
          * @param string $prefix
-         * @return \Illuminate\Database\SQLiteConnection 
+         * @return \Libsql\Laravel\LibsqlConnection 
          * @static 
          */
         public static function setTablePrefix($prefix)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->setTablePrefix($prefix);
         }
 
@@ -7948,7 +7951,7 @@ namespace Illuminate\Support\Facades {
         public static function withTablePrefix($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->withTablePrefix($grammar);
         }
 
@@ -7962,7 +7965,7 @@ namespace Illuminate\Support\Facades {
         public static function withoutTablePrefix($callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->withoutTablePrefix($callback);
         }
 
@@ -7975,7 +7978,7 @@ namespace Illuminate\Support\Facades {
         public static function getServerVersion()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->getServerVersion();
         }
 
@@ -7990,7 +7993,7 @@ namespace Illuminate\Support\Facades {
         public static function resolverFor($driver, $callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            \Illuminate\Database\SQLiteConnection::resolverFor($driver, $callback);
+            \Libsql\Laravel\LibsqlConnection::resolverFor($driver, $callback);
         }
 
         /**
@@ -8003,7 +8006,7 @@ namespace Illuminate\Support\Facades {
         public static function getResolver($driver)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            return \Illuminate\Database\SQLiteConnection::getResolver($driver);
+            return \Libsql\Laravel\LibsqlConnection::getResolver($driver);
         }
 
         /**
@@ -8021,7 +8024,7 @@ namespace Illuminate\Support\Facades {
         public static function transaction($callback, $attempts = 1)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->transaction($callback, $attempts);
         }
 
@@ -8035,7 +8038,7 @@ namespace Illuminate\Support\Facades {
         public static function beginTransaction()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->beginTransaction();
         }
 
@@ -8049,7 +8052,7 @@ namespace Illuminate\Support\Facades {
         public static function commit()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->commit();
         }
 
@@ -8064,7 +8067,7 @@ namespace Illuminate\Support\Facades {
         public static function rollBack($toLevel = null)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->rollBack($toLevel);
         }
 
@@ -8077,7 +8080,7 @@ namespace Illuminate\Support\Facades {
         public static function transactionLevel()
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             return $instance->transactionLevel();
         }
 
@@ -8092,7 +8095,7 @@ namespace Illuminate\Support\Facades {
         public static function afterCommit($callback)
         {
             //Method inherited from \Illuminate\Database\Connection 
-            /** @var \Illuminate\Database\SQLiteConnection $instance */
+            /** @var \Libsql\Laravel\LibsqlConnection $instance */
             $instance->afterCommit($callback);
         }
 

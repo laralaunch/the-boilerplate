@@ -44,6 +44,13 @@ return [
             'synchronous' => null,
         ],
 
+        'libsql' => [
+            'driver' => 'libsql',
+            'database' => env('TURSO_DATABASE'),
+            'url' => env('TURSO_DATABASE_URL'),
+            'password' => env('TURSO_AUTH_TOKEN'),
+        ],
+
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),

@@ -11,7 +11,8 @@
     "require": {
         "php": "^8.4",
         "laravel/framework": "^11.39",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "turso/libsql-laravel": "^0.1.3"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.4",
